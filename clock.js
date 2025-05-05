@@ -1,5 +1,7 @@
-function updateWatch() {
+function updateDateTime() {
     const now = new Date();
+    
+    // Update time
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
@@ -22,8 +24,21 @@ function updateWatch() {
     const secondsValue = now.getSeconds();
     const colorIndex = secondsValue % rainbowColors.length;
     document.getElementById('seconds').style.color = rainbowColors[colorIndex];
+    
+    // Update calendar
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                   'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    const dayName = days[now.getDay()];
+    const monthName = months[now.getMonth()];
+    const date = now.getDate();
+    const year = now.getFullYear();
+    
+    document.getElementById('day').textContent = dayName;
+    document.getElementById('date').textContent = `${monthName} ${date}, ${year}`;
 }
 
 // Update immediately and then every second
-updateWatch();
-setInterval(updateWatch, 1000);
+updateDateTime();
+setInterval(updateDateTime, 1000);
