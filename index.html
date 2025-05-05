@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Digital Watch with Calendar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Digital Watch</title>
     <link rel="stylesheet" href="clock.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="gradient-bg"></div>
     <div class="container">
-        <div id="watch">
-            <span id="hours">00</span>
-            <span class="time-separator">:</span>
-            <span id="minutes">00</span>
-            <span class="time-separator">:</span>
-            <span id="seconds">00</span>
-        </div>
-        <div id="calendar">
-            <div id="day">Monday</div>
-            <div id="date">January 1, 2023</div>
+        <div class="watch-card">
+            <div id="watch">
+                <span id="hours">00</span>
+                <span class="time-separator">:</span>
+                <span id="minutes">00</span>
+                <span class="time-separator">:</span>
+                <span id="seconds">00</span>
+            </div>
+            <div id="calendar">
+                <div id="day">MONDAY</div>
+                <div id="date">JANUARY 1, 2023</div>
+            </div>
         </div>
     </div>
-
     <script src="clock.js"></script>
 </body>
 </html>
